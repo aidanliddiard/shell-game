@@ -1,4 +1,17 @@
 /* add home page styles here */
 .shells img {
-    width: 100px;
+    width: 125px;
+    padding: 15px;
+}
+
+.shells {
+    display: flex;
+    flex-direction: row;
+}
+
+.shell {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
