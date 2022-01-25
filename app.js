@@ -2,6 +2,7 @@
 const shellOneBtn = document.getElementById('shell-1-btn');
 const shellTwoBtn = document.getElementById('shell-2-btn');
 const shellThreeBtn = document.getElementById('shell-3-btn');
+const resetBtn = document.getElementById('reset');
 
 const pearl1 = document.getElementById('pearl-1');
 const pearl2 = document.getElementById('pearl-2');
@@ -77,6 +78,7 @@ shellTwoBtn.addEventListener('click', ()=> {
     winsEl.textContent = correctGuess;
     totalEl.textContent = totalGuesses;
     lossesEl.textContent = totalGuesses - correctGuess;
+    percentEl.textContent = percentage(correctGuess, totalGuesses);
 });
 
 shellThreeBtn.addEventListener('click', ()=> {
@@ -102,4 +104,21 @@ shellThreeBtn.addEventListener('click', ()=> {
     winsEl.textContent = correctGuess;
     totalEl.textContent = totalGuesses;
     lossesEl.textContent = totalGuesses - correctGuess;
+    percentEl.textContent = percentage(correctGuess, totalGuesses);
+});
+
+resetBtn.addEventListener('click', ()=> {
+    pearl1.classList.remove('reveal');
+    pearl2.classList.remove('reveal');
+    pearl3.classList.remove('reveal');
+
+    winsEl.textContent = 0;
+    totalEl.textContent = 0;
+    lossesEl.textContent = 0;
+    percentEl.textContent = 0;
+
+    correctGuess = 0;
+    totalGuesses = 0;
+    
+
 });
