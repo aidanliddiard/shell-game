@@ -20,7 +20,7 @@
     height: 30px;
     width: 30px;
     margin: 10px;
-    background-color: #d1d4d6;
+    background-color: rgba(255, 255, 255, 0.719);
     border-radius: 50%;
     box-shadow: 2px 2px 7px 1px #3c4b55;
 }
