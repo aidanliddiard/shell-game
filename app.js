@@ -17,6 +17,10 @@ let correctGuess = 0;
 let totalGuesses = 0;
 
 // set event listeners 
+// get user input
+// use user input to update state 
+// update DOM to reflect the new state
+
 shellOneBtn.addEventListener('click', ()=> {
     pearl1.classList.remove('reveal');
     pearl2.classList.remove('reveal');
@@ -42,6 +46,52 @@ shellOneBtn.addEventListener('click', ()=> {
     lossesEl.textContent = totalGuesses - correctGuess;
 });
 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+shellTwoBtn.addEventListener('click', ()=> {
+    pearl1.classList.remove('reveal');
+    pearl2.classList.remove('reveal');
+    pearl3.classList.remove('reveal');
+
+    totalGuesses++;
+
+    const pearlLocation = Math.ceil(Math.random() * 3);
+
+    if (pearlLocation === 1) {
+        pearl1.classList.add('reveal');
+    }
+    else if (pearlLocation === 2) {
+        pearl2.classList.add('reveal');
+        correctGuess++;
+    }
+    else {
+        pearl3.classList.add('reveal');
+    }
+
+    winsEl.textContent = correctGuess;
+    totalEl.textContent = totalGuesses;
+    lossesEl.textContent = totalGuesses - correctGuess;
+});
+
+shellThreeBtn.addEventListener('click', ()=> {
+    pearl1.classList.remove('reveal');
+    pearl2.classList.remove('reveal');
+    pearl3.classList.remove('reveal');
+
+    totalGuesses++;
+
+    const pearlLocation = Math.ceil(Math.random() * 3);
+
+    if (pearlLocation === 1) {
+        pearl1.classList.add('reveal');
+    }
+    else if (pearlLocation === 2) {
+        pearl2.classList.add('reveal');
+    }
+    else {
+        pearl3.classList.add('reveal');
+        correctGuess++;
+    }
+
+    winsEl.textContent = correctGuess;
+    totalEl.textContent = totalGuesses;
+    lossesEl.textContent = totalGuesses - correctGuess;
+});
