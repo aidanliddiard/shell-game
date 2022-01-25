@@ -36,11 +36,12 @@ shellOneBtn.addEventListener('click', ()=> {
     else {
         pearl3.classList.add('reveal');
     }
+
+    winsEl.textContent = correctGuess;
+    totalEl.textContent = totalGuesses;
+    lossesEl.textContent = totalGuesses - correctGuess;
 });
 
-winsEl.textContent = correctGuess;
-totalEl.textContent = totalGuesses;
-lossesEl.textContent = totalGuesses - correctGuess;
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state
