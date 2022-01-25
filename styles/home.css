@@ -1,1 +1,57 @@
 /* add home page styles here */
+.shells img {
+    width: 125px;
+    padding: 15px;
+}
+
+.shells {
+    display: flex;
+    flex-direction: row;
+}
+
+.shell {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pearl.reveal{
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.719);
+    border-radius: 50%;
+    box-shadow: 2px 2px 7px 1px #3c4b55;
+}
+
+section {
+    background-image: url("/assets/ocean.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+#results {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.results {
+    padding: 10px;
+    color: white;
+    border: double;
+    border-radius: 25%;
+}
+
+h2 {
+    color: white;
+    font-variant: small-caps;
+}
+
+#reset-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+}

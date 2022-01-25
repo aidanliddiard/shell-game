@@ -3,8 +3,8 @@ body {
     /* feel free to update these css variables for a quick theme */
     
     --color1: white;
-    --color2: white;
-    --color3: white;
+    --color2: rgba(216, 206, 190, 0.829);
+    --color3: rgba(240, 194, 135, 0.897);
     --color4: white;
     --color5: white;
     
@@ -50,7 +50,7 @@ section {
     padding-bottom: var(--gutter);
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
+    border: solid 5px var(--color1);
 }
 
 header {
@@ -78,7 +78,7 @@ header img {
 p {
     margin: var(--gutter);
 }
-  
+
 footer {
     position: fixed;
     width: 100%;
