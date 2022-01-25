@@ -10,11 +10,16 @@ const pearl3 = document.getElementById('pearl-3');
 const winsEl = document.getElementById('wins');
 const lossesEl = document.getElementById('losses');
 const totalEl = document.getElementById('totalGames');
+const percentEl = document.getElementById('winPercent');
 
 // let state
 
 let correctGuess = 0;
 let totalGuesses = 0;
+
+function percentage(correct, total){
+    return (Math.round(100 * (correct) / total));
+}
 
 // set event listeners 
 // get user input
@@ -28,7 +33,7 @@ shellOneBtn.addEventListener('click', ()=> {
 
     totalGuesses++;
 
-    const pearlLocation = Math.ceil(Math.random() *3);
+    const pearlLocation = Math.ceil(Math.random() * 3);
 
     if (pearlLocation === 1) {
         pearl1.classList.add('reveal');
@@ -44,6 +49,9 @@ shellOneBtn.addEventListener('click', ()=> {
     winsEl.textContent = correctGuess;
     totalEl.textContent = totalGuesses;
     lossesEl.textContent = totalGuesses - correctGuess;
+    percentEl.textContent = percentage(correctGuess, totalGuesses);
+    
+    
 });
 
 shellTwoBtn.addEventListener('click', ()=> {
