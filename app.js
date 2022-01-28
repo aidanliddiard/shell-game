@@ -28,9 +28,7 @@ function percentage(correct, total){
 // update DOM to reflect the new state
 
 shellOneBtn.addEventListener('click', ()=> {
-    pearl1.classList.remove('reveal');
-    pearl2.classList.remove('reveal');
-    pearl3.classList.remove('reveal');
+    reveal();
 
     totalGuesses++;
 
@@ -46,19 +44,12 @@ shellOneBtn.addEventListener('click', ()=> {
     else {
         pearl3.classList.add('reveal');
     }
-
-    winsEl.textContent = correctGuess;
-    totalEl.textContent = totalGuesses;
-    lossesEl.textContent = totalGuesses - correctGuess;
-    percentEl.textContent = percentage(correctGuess, totalGuesses);
     
-    
+    displayResults();
 });
 
 shellTwoBtn.addEventListener('click', ()=> {
-    pearl1.classList.remove('reveal');
-    pearl2.classList.remove('reveal');
-    pearl3.classList.remove('reveal');
+    reveal();
 
     totalGuesses++;
 
@@ -75,16 +66,11 @@ shellTwoBtn.addEventListener('click', ()=> {
         pearl3.classList.add('reveal');
     }
 
-    winsEl.textContent = correctGuess;
-    totalEl.textContent = totalGuesses;
-    lossesEl.textContent = totalGuesses - correctGuess;
-    percentEl.textContent = percentage(correctGuess, totalGuesses);
+    displayResults();
 });
 
 shellThreeBtn.addEventListener('click', ()=> {
-    pearl1.classList.remove('reveal');
-    pearl2.classList.remove('reveal');
-    pearl3.classList.remove('reveal');
+    reveal();
 
     totalGuesses++;
 
@@ -101,11 +87,21 @@ shellThreeBtn.addEventListener('click', ()=> {
         correctGuess++;
     }
 
+    displayResults();
+});
+
+function reveal() {
+    pearl1.classList.remove('reveal');
+    pearl2.classList.remove('reveal');
+    pearl3.classList.remove('reveal');
+}
+
+function displayResults() {
     winsEl.textContent = correctGuess;
     totalEl.textContent = totalGuesses;
     lossesEl.textContent = totalGuesses - correctGuess;
     percentEl.textContent = percentage(correctGuess, totalGuesses);
-});
+}
 
 resetBtn.addEventListener('click', ()=> {
     pearl1.classList.remove('reveal');
