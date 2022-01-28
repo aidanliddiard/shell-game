@@ -115,6 +115,4 @@ resetBtn.addEventListener('click', ()=> {
 
     correctGuess = 0;
     totalGuesses = 0;
-    
-
 });
